@@ -1,0 +1,89 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans)
+ 
+
+@font-face 
+  font-family: "Material-Design-Icons"
+  src: url("Material-Design-Icons.woff") format("woff")
+  font-weight: normal
+  font-style: normal
+
+@mixin animation($stuff) 
+  -webkit-animation: $stuff
+  -moz-animation: $stuff
+  -o-animation: $stuff
+  animation: $stuff
+
+@mixin animation-duration($stuff) 
+  -webkit-animation-duration: $stuff
+  -moz-animation-duration: $stuff
+  -o-animation-duration: $stuff
+  animation-duration: $stuff
+
+
+@mixin animation-fill-mode($stuff) 
+  -webkit-animation-fill-mode: $stuff
+  -moz-animation-fill-mode: $stuff
+  -o-animation-fill-mode: $stuff
+  animation-duration: $stuff
+
+@mixin keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+
+  @-moz-keyframes #{$name}
+    @content
+
+  @-o-keyframes #{$name}
+    @content
+
+  @keyframes #{$name}
+    @content
+
+@mixin box-shadow($stuff)
+  -webkit-box-shadow: $stuff
+  -moz-box-shadow: $stuff
+  box-shadow: $stuff
+
+html, body
+  font-family: Cantarell , sans-serif
+  font-size: 16px
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
+  background-color: #333
+
+// nav bar
+
+nav
+  img
+    padding:  1em
+.card
+  position: relative
+  float: left !important
+  width: auto
+  height: auto
+  margin: 1em
+  padding: 2em
+  
+  // loading animation
+  @include animation(fadeIn ease-in 1 !important)
+  @include animation-duration(.5s !important)
+  @include animation-fill-mode(forwards !important)
+  .card 
+    // loading animation
+    @include box-shadow(none !important)
+    @include animation(fadeIn ease-in 1 !important)
+    @include animation-duration(.75s !important)
+    @include animation-fill-mode(forwards !important)
+
+.ie
+  .card
+    opacity: 1
+
+
+@include keyframes(fadeIn)
+  0% 
+    opacity: 0
+  100% 
+    opacity: 1
