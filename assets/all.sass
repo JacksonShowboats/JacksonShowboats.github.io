@@ -1,0 +1,86 @@
+//@import url(http://fonts.googleapis.com/css?family=Open+Sans)
+ 
+
+@font-face 
+  font-family: "Material-Design-Icons"
+  src: url("Material-Design-Icons.woff") format("woff")
+  font-weight: normal
+  font-style: normal
+
+@mixin animation($stuff) 
+  -webkit-animation: $stuff
+  -moz-animation: $stuff
+  -o-animation: $stuff
+  -ms-animation: $stuff
+  animation: $stuff
+
+@mixin animation-duration($stuff) 
+  -webkit-animation-duration: $stuff
+  -moz-animation-duration: $stuff
+  -o-animation-duration: $stuff
+  -ms-animation-duration: $stuff
+  animation-duration: $stuff
+
+
+@mixin animation-fill-mode($stuff) 
+  -webkit-animation-fill-mode: $stuff
+  -moz-animation-fill-mode: $stuff
+  -o-animation-fill-mode: $stuff
+  -ms-animation-duration: $stuff
+  animation-duration: $stuff
+
+@mixin keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-o-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+html, body
+  font-family: Cantarell , sans-serif
+  font-size: 16px
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
+  background-color: #333
+
+
+nav .brand-logo
+  // the double padding makes it 
+  // have no impaxct on the mobile 
+  // version, but work on the 
+  // desktop one
+  // really long comments are great
+  padding-left:  1em
+  padding-right: 1em
+  
+.card
+  position: relative
+  float: left !important
+  width: auto
+  height: auto
+  margin: 1em
+  padding: 2em
+  
+  // loading animation
+  @include animation(fadeIn ease-in 1 !important)
+  @include animation-duration(.5s !important)
+  @include animation-fill-mode(forwards !important)
+  .card 
+    box-shadow: none;
+    // loading animation
+    @include animation(fadeIn ease-in !important)
+    @include animation-duration(.75s !important)
+    @include animation-fill-mode(forwards !important)
+
+@include keyframes(fadeIn)
+  0% 
+    opacity: 0
+  100% 
+    opacity: 1
