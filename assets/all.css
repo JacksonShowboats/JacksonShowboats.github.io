@@ -1,10 +1,18 @@
 @font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(http://fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff'); }
+
+@font-face {
   font-family: "Material-Design-Icons";
   src: url("Material-Design-Icons.woff") format("woff");
+  src: url("Material-Design-Icons.ttf") format("truetype");
+  src: url("Material-Design-Icons.eot") format("embedded-opentype");
   font-weight: normal;
   font-style: normal; }
 
-/* line 43, /home/ndaigneault/Documents/JacksonShowboats.github.io/assets/all.sass */
+/* line 51, /home/ndaigneault/Documents/JacksonShowboats.github.io/assets/all.sass */
 html, body {
   font-family: Cantarell, sans-serif;
   font-size: 16px;
@@ -14,12 +22,12 @@ html, body {
   padding: 0;
   background-color: #333; }
 
-/* line 53, /home/ndaigneault/Documents/JacksonShowboats.github.io/assets/all.sass */
+/* line 60, /home/ndaigneault/Documents/JacksonShowboats.github.io/assets/all.sass */
 nav .brand-logo {
   padding-left: 1em;
   padding-right: 1em; }
 
-/* line 57, /home/ndaigneault/Documents/JacksonShowboats.github.io/assets/all.sass */
+/* line 65, /home/ndaigneault/Documents/JacksonShowboats.github.io/assets/all.sass */
 .card {
   position: relative;
   float: left !important;
@@ -42,7 +50,7 @@ nav .brand-logo {
   -o-animation-fill-mode: forwards !important;
   -ms-animation-duration: forwards !important;
   animation-duration: forwards !important; }
-  /* line 68, /home/ndaigneault/Documents/JacksonShowboats.github.io/assets/all.sass */
+  /* line 76, /home/ndaigneault/Documents/JacksonShowboats.github.io/assets/all.sass */
   .card .card {
     box-shadow: none;
     -webkit-animation: fadeIn ease-in !important;
@@ -60,50 +68,5 @@ nav .brand-logo {
     -o-animation-fill-mode: forwards !important;
     -ms-animation-duration: forwards !important;
     animation-duration: forwards !important; }
-
-@-webkit-keyframes fadeIn {
-  /* line 75, /home/ndaigneault/Documents/JacksonShowboats.github.io/assets/all.sass */
-  0% {
-    opacity: 0; }
-
-  /* line 77, /home/ndaigneault/Documents/JacksonShowboats.github.io/assets/all.sass */
-  100% {
-    opacity: 1; } }
-
-@-moz-keyframes fadeIn {
-  /* line 75, /home/ndaigneault/Documents/JacksonShowboats.github.io/assets/all.sass */
-  0% {
-    opacity: 0; }
-
-  /* line 77, /home/ndaigneault/Documents/JacksonShowboats.github.io/assets/all.sass */
-  100% {
-    opacity: 1; } }
-
-@-o-keyframes fadeIn {
-  /* line 75, /home/ndaigneault/Documents/JacksonShowboats.github.io/assets/all.sass */
-  0% {
-    opacity: 0; }
-
-  /* line 77, /home/ndaigneault/Documents/JacksonShowboats.github.io/assets/all.sass */
-  100% {
-    opacity: 1; } }
-
-@-ms-keyframes fadeIn {
-  /* line 75, /home/ndaigneault/Documents/JacksonShowboats.github.io/assets/all.sass */
-  0% {
-    opacity: 0; }
-
-  /* line 77, /home/ndaigneault/Documents/JacksonShowboats.github.io/assets/all.sass */
-  100% {
-    opacity: 1; } }
-
-@keyframes fadeIn {
-  /* line 75, /home/ndaigneault/Documents/JacksonShowboats.github.io/assets/all.sass */
-  0% {
-    opacity: 0; }
-
-  /* line 77, /home/ndaigneault/Documents/JacksonShowboats.github.io/assets/all.sass */
-  100% {
-    opacity: 1; } }
 
 /*# sourceMappingURL=all.css.map */

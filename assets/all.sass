@@ -1,9 +1,16 @@
-//@import url(http://fonts.googleapis.com/css?family=Open+Sans)
+@font-face
+  font-family: 'Open Sans'
+  font-style: normal
+  font-weight: 400
+  src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(http://fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff')
+
  
 
-@font-face 
+@font-face  
   font-family: "Material-Design-Icons"
   src: url("Material-Design-Icons.woff") format("woff")
+  src: url("Material-Design-Icons.ttf") format("truetype")
+  src: url("Material-Design-Icons.eot") format("embedded-opentype")
   font-weight: normal
   font-style: normal
 
@@ -50,15 +57,15 @@ html, body
   padding: 0
   background-color: #333
 
-
 nav .brand-logo
-  // the double padding makes it 
-  // have no impaxct on the mobile 
-  // version, but work on the 
-  // desktop one
+  // the double padding has no
+  // impact on the mobile 
+  // version, but works on the 
+  // desktop version.
   // really long comments are great
   padding-left:  1em
   padding-right: 1em
+
   
 .card
   position: relative
@@ -73,14 +80,9 @@ nav .brand-logo
   @include animation-duration(.5s !important)
   @include animation-fill-mode(forwards !important)
   .card 
-    box-shadow: none;
+    box-shadow: none
     // loading animation
     @include animation(fadeIn ease-in !important)
     @include animation-duration(.75s !important)
     @include animation-fill-mode(forwards !important)
 
-@include keyframes(fadeIn)
-  0% 
-    opacity: 0
-  100% 
-    opacity: 1
