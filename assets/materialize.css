@@ -2510,7 +2510,11 @@ span.badge {
   text-overflow: ellipsis; }
 
 
-
+@font-face {
+  font-family: "Material-Design-Icons";
+  src: url("Material-Design-Icons.woff") format("woff"), url("Material-Design-Icons.ttf") format("truetype"), url("Material-Design-Icons.eot") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
 
 [class^="mdi-"], [class*=" mdi-"] {
   font-family: "Material-Design-Icons";
